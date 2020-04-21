@@ -1,15 +1,15 @@
 import { uuid } from 'uuidv4';
 
-class Transaction {
+class Tansaction {
   id: string;
 
   title: string;
 
   value: number;
 
-  type: 'income' | 'outcome';
+  type: string;
 
-  constructor({ title, value, type }: Omit<Transaction, 'id'>) {
+  constructor({ title, value, type }: Omit<Tansaction, 'id'>) {
     this.id = uuid();
     this.title = title;
     this.value = value;
@@ -17,4 +17,4 @@ class Transaction {
   }
 }
 
-export default Transaction;
+export default Tansaction;
